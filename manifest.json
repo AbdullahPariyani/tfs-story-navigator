@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "TFS Story Navigator",
+  "version": "1.0",
+  "description": "Quickly navigate to TFS work items by entering their ID",
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon16.png",
+      "128": "icons/icon16.png"
+    }
+  },
+  "permissions": [
+    "activeTab"
+  ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon16.png",
+    "128": "icons/icon16.png"
+  }
+}
