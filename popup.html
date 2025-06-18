@@ -2,57 +2,7 @@
 <html>
     <head>
         <title>TFS & Support Navigator</title>
-        <style>
-    body {
-      width: 300px;
-      padding: 15px;
-      font-family: Arial, sans-serif;
-    }
-
-    .container {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
-
-    h1 {
-      font-size: 16px;
-      margin: 0 0 10px 0;
-      color: #333;
-      border-bottom: 1px solid #eee;
-      padding-bottom: 8px;
-    }
-
-    .input-group {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-
-    label {
-      font-weight: bold;
-      color: #555;
-    }
-
-    input {
-      padding: 8px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-
-    button {
-      padding: 8px;
-      background-color: #0078d7;
-      color: white;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background-color: #106ebe;
-    }
-  </style>
+        <link rel="stylesheet" href="styles.css">
     </head>
     <body>
         <div class="container">
@@ -83,42 +33,15 @@
                 <button id="supportGo">Open</button>
             </div>
         </div>
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-      // Elements
-      const tfsInput = document.getElementById('tfsNumber');
-      const supportInput = document.getElementById('supportNumber');
-      const tfsGoBtn = document.getElementById('tfsGo');
-      const supportGoBtn = document.getElementById('supportGo');
-
-      // Focus TFS input on load
-      tfsInput.focus();
-
-      // TFS Navigation
-      tfsGoBtn.addEventListener('click', () => {
-        const storyNumber = tfsInput.value.trim();
-        if (storyNumber) {
-          window.open(`http://tfs/DefaultCollection/Motor%20Track/_workitems/edit/${storyNumber}`, '_blank');
-        }
-      });
-
-      // Support Ticket Navigation
-      supportGoBtn.addEventListener('click', () => {
-        const ticketNumber = supportInput.value.trim();
-        if (ticketNumber) {
-          window.open(`https://support.malath.com.sa/ui/changes?entity_id=${ticketNumber}&mode=detail#Planning/details`, '_blank');
-        }
-      });
-
-      // Allow Enter key to submit
-      tfsInput.addEventListener('keypress', (e) => {
-        if (e.key === 'Enter') tfsGoBtn.click();
-      });
-
-      supportInput.addEventListener('keypress', (e) => {
-        if (e.key === 'Enter') supportGoBtn.click();
-      });
-    });
-        </script>
+        <div style="
+    text-align: center;
+    padding: 10px;
+    font-size: 12px;
+    color: gray;
+    font-style: italic;
+">
+            <span>Created By: Abdullah Pariyani</span>
+        </div>
+        <script src="popup.js"></script>
     </body>
 </html>
